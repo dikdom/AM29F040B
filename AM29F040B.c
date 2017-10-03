@@ -205,11 +205,10 @@ char amdTestDevice(void) {
 		AMD_Write_Data((uint8_t)x,(uint32_t)x );
 		chipCompare = AMD_Read_Data((uint32_t)x); 
 		
-		if (chipCompare != x); 
-		 {
-		 	err = ERROR_AMD_READ_WRITE; 
+		if (chipCompare != x) {
+			err = ERROR_AMD_READ_WRITE; 
 		 	return err;
-		 }
+		}
 	}
 
 	return err; 
